@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'auth.dart';
 
 class SignupPage extends StatefulWidget {
   @override
@@ -10,12 +11,20 @@ class _SignupPageState extends State<SignupPage> {
   String _email = '';
   String _password = '';
   String _confirmPassword = '';
+  AuthService authService = AuthService();
 
-  void _submit() {
+  void _submit() async {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState!.save();
-      // Handle signup logic here
-      print('Email: $_email, Password: $_password');
+      String? userId =
+          await authService.signUpWithEmailAndPassword(_email, _password);
+      if (userId != null) {
+        // Navigate to authenticated screen or perform necessary actions
+        print('Signed up with UID: $userId');
+      } else {
+        // Handle sign-up failure
+        print('Sign up failed');
+      }
     }
   }
 

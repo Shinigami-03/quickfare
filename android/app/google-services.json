@@ -1,0 +1,29 @@
+{
+    "project_info": {
+      "project_number": "1063790336677",
+      "project_id": "quickfare-85021",
+      "storage_bucket": "quickfare-85021.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:1063790336677:android:3e1930d99f0f50b5628b4c",
+          "android_client_info": {
+            "package_name": "com.yourcompany.quickfare"
+          }
+        },
+        "oauth_client": [],
+        "api_key": [
+          {
+            "current_key": "AIzaSyDlhFrPuj5WlDsRuEm_pGZpnzZEwrJIVqU"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": []
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }
